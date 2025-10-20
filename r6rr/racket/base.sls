@@ -23,6 +23,20 @@
    ;; define
    define-syntax-rule
 
+   ;; do-sequences
+   :init-pos
+   :continue-with-pos?
+   :pos->element
+   :continue-with-val?
+   :early-next-pos
+   :continue-after-pos+val?
+   :next-pos
+   make-do-sequence
+   do-sequence?
+   do-sequence-generate
+   do-sequence-generate*
+   initiate-sequence
+
    ;; error
    unquoted-printing-string?
    unquoted-printing-string
@@ -91,16 +105,6 @@
    eprintf
 
    ;; sequences
-   :init-pos
-   :continue-with-pos?
-   :pos->element
-   :continue-with-val?
-   :early-next-pos
-   :continue-after-pos+val?
-   :next-pos
-   make-do-sequence
-   do-sequence?
-   initiate-do-sequence
    define-sequence
    sequence?
    sequence-generate
@@ -125,6 +129,7 @@
   (import (r6rr racket base private contracts)
           (r6rr racket base private control)
           (r6rr racket base private define)
+          (r6rr racket base private do-sequences)
           (r6rr racket base private error)
           (r6rr racket base private exceptions)
           (r6rr racket base private for)
